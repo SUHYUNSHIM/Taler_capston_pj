@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.taler">
+    <!-- 인터넷 사용 권한 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/NoTitleTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MediaMenu.MediaMenuActivity" />
+        <activity android:name=".MediaActivity" />
+        <activity android:name=".PopTestActivity" />
+        <!-- 팝업 Activity -->
+        <activity android:name=".FloatingActivity"/>
+        <!-- Activity -->
+        <activity android:name=".Story.CardListActivity" />
+        <activity android:name=".Story.StoryCardActivity" />
+        <activity android:name=".LoginActivity" android:theme="@style/SplashTheme">
+            <meta-data
+                android:name="com.google.android.actions"
+                android:resource="@drawable/toggle_btn_play" />
+
+            <!-- Start Activity 설정부분 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+    </application>
+
+</manifest>
